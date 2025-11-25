@@ -8,7 +8,7 @@ func QuadA(x,y int)
 import "fmt"
 
 func QuadA(x, y int) {
-    if x <= 0 || y <= 0 { // comment
+    if x <= 0 || y <= 0 { // comment here
         return
     }
 
