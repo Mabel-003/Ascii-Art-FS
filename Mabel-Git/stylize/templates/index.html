@@ -1,0 +1,53 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=VT323"> -->
+    <!-- <link rel="stylesheet" href="../styling/style.css" /> -->
+     <link rel="stylesheet" href="../styling/style.css">
+        <title>
+            ASCII ART WEB
+        </title>
+
+    </head>
+
+    <body>
+            <div class="bd"> 
+            
+            <h1> ASCII ART GENERATOR</h1>   
+           
+
+            <p class="instruction">Instruction: Enter text, select preferred banner and submit</p>
+            <div class="asciibody">
+                <form  action="/ascii-art" method="POST"> 
+                    <div class="form-input">
+                        <textarea name="inputText" placeholder="Enter your input..">{{.Input}}</textarea>
+                        <select name="banner" class="bannerclick">
+                            <option value="standard">Standard</option>
+                            <option value="shadow">Shadow</option>
+                            <option value="thinkertoy">Thinkertoy</option>
+                        </select>
+                          
+                    </div>
+                    <div>
+                        <button type="submit"><h2 class="buttontext">Generate</h2></button>
+                    </div>
+                    
+                </form>
+            </div>
+
+                <div class="output">
+            <pre>{{.Result}}</pre>
+            </div>
+            <footer>
+                <p>© 2026 ASCII ART GENERATOR | Powered by Go</p>
+                <a href="#">Documentation</a>
+                <a href="https://learn2earn.ng/git/cjacob/stylize">Gitea Repository</a>
+            </footer>
+            </div> 
+    </body>
+</html>
+{{end}}
